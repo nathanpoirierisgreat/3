@@ -1,26 +1,4 @@
 input.onButtonPressed(Button.A, function () {
-	
-})
-input.onButtonPressed(Button.B, function () {
-    for (let index = 0; index < 37; index++) {
-        basic.showLeds(`
-            . . . . .
-            # . # . #
-            . # # # .
-            . . # . .
-            . # . # .
-            `)
-        basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . . # . .
-            . # . # .
-            `)
-    }
-    basic.clearScreen()
-})
-basic.forever(function () {
     if (tinkercademy.ADKeyboard(ADKeys.A, AnalogPin.P3)) {
         for (let index = 0; index < 2; index++) {
             music.playTone(440, music.beat(BeatFraction.Whole))
@@ -179,4 +157,27 @@ basic.forever(function () {
             basic.clearScreen()
         }
     }
+})
+input.onButtonPressed(Button.B, function () {
+    for (let index = 0; index < 37; index++) {
+        basic.showLeds(`
+            . . . . .
+            # . # . #
+            . # # # .
+            . . # . .
+            . # . # .
+            `)
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            . # # # .
+            . . # . .
+            . # . # .
+            `)
+    }
+    basic.clearScreen()
+})
+basic.showString("Hello Mr Lachance. press A and on the 8th note, press B.")
+basic.forever(function () {
+	
 })
